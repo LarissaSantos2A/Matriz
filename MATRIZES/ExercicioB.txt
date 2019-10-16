@@ -1,0 +1,35 @@
+import java.math.*;
+public class ExercicioB{
+	public static void main (String args[]) {
+		int v[][] = new int [3][3];
+		int i,j,ma=0,va=0,a=0,me=5,li=0,co=0;
+		for(i=0;i<3;i++) {
+			for(j=0;j<3;j++) {
+				v[i][j] = (int) (Math.random()*10);
+			}
+		}
+		            for(i=0;i<3;i++) {
+			for(j=0;j<3;j++) {
+				System.out.print(" ["+v[i][j]+"] ");				
+			}
+			      System.out.println();
+		}
+		   for(i=0;i<3;i++) {
+			for(j=0;j<3;j++) {
+				if(v[i][j]>ma) {
+					ma = v[i][j];
+					va = i;
+					a = j;
+		}if(v[i][j]<me) {
+					me = v[i][j];
+					li = i;
+					co = j;
+				}
+				
+			}
+		}
+           System.out.println("O maior é "+ma+", a linha "+va+", a coluna "+a+".");
+System.out.println("O menor é "+me+", a linha "+li+", a coluna "+co+".");
+	}
+
+}
